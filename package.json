@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch --parallel",
+    "test:coverage": "turbo run test:coverage",
+    "e2e": "turbo run e2e"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.2.1",
+    "eslint": "^8.24.0",
+    "eslint-config-custom": "*",
+    "jest": "^29.2.2",
+    "prettier": "^2.7.1",
+    "react-test-renderer": "^18.2.0",
+    "turbo": "latest"
+  }
+}
