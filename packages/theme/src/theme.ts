@@ -8,6 +8,7 @@ import {
   lineHeights,
   textStyles,
 } from "./typography";
+import { shadows } from "./shadows";
 import { space } from "./space";
 
 export const theme: DefaultTheme = {
@@ -17,6 +18,7 @@ export const theme: DefaultTheme = {
   fontSizes,
   fontWeights,
   lineHeights,
+  shadows,
   space,
   textStyles,
 };

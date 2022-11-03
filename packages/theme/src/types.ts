@@ -10,6 +10,7 @@ import {
   TextStyles,
 } from "./typography";
 import { Space } from "./space";
+import { Shadows } from "./shadows";
 
 export interface DefaultTheme {
   breakpoints: Breakpoints;
@@ -18,6 +19,7 @@ export interface DefaultTheme {
   fontSizes: FontSizes;
   fontWeights: FontWeights;
   lineHeights: LineHeights;
+  shadows: Shadows;
   space: Space;
   textStyles: TextStyles;
 }

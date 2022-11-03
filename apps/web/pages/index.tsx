@@ -1,26 +1,13 @@
-import styled from "@emotion/styled";
-
 import { Box, Layout, Text, Button } from "@shared/core";
-
-const Test = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-  margin-bottom: ${({ theme }) => theme.space[4]};
-  background-color: ${({ theme }) => theme.colors.secondary[95]};
-  border: 1px solid ${({ theme }) => theme.colors.secondary[80]};
-  color: ${({ theme }) => theme.colors.secondary[40]};
-  font-family: ${({ theme }) => theme.fonts.monospace};
-  font-size: ${({ theme }) => theme.fontSizes["label-large"]};
-`;
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Box p={[8, 4]} width={[1, 0.75, 0.5]}>
-        <Test children="Test" />
+      <Box
+        p={{ _: 8, xl: 4 }}
+        width={{ _: 1, lg: 0.8, xl: 0.6 }}
+        mx={{ _: 0, lg: "auto" }}
+      >
         <Text
           as="h1"
           textStyle={["text-headline-medium", "text-display-small"]}
@@ -34,7 +21,17 @@ const IndexPage = () => {
           meditation, ennui DIY swag vegan praxis portland pop-up. Woke squid
           viral hella affogato neutra.
         </Text>
-        <Button>Primary Button</Button>
+        <Box
+          display="grid"
+          gridAutoFlow={{ _: "row", lg: "column" }}
+          gridGap="4"
+        >
+          <Button variant="elevated">Elevated Button</Button>
+          <Button variant="filled">Filled Button</Button>
+          <Button variant="outlined">Outlined Button</Button>
+          <Button variant="text">Text Button</Button>
+          <Button variant="tonal">Tonal Button</Button>
+        </Box>
       </Box>
     </Layout>
   );
