@@ -1,5 +1,6 @@
 import "@shared/theme";
 import styled from "@emotion/styled";
+import isPropValid from "@emotion/is-prop-valid";
 import { lighten, transparentize } from "polished";
 import { variant } from "styled-system";
 
@@ -9,7 +10,11 @@ interface RootProps {
   variant?: ButtonVariant;
 }
 
-export const Root = styled.button<RootProps>`
+export const Root = styled("button", {
+  shouldForwardProp: (prop: string) =>
+    (!["variant", "onPress"].includes(prop) && isPropValid(prop)) ||
+    prop === "children",
+})<RootProps>`
   /* Reset global styles... */
   all: unset;
 

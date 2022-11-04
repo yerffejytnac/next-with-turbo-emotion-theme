@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { AriaButtonProps } from "react-aria";
 
 // There are five types of common buttons: elevated, filled, filled tonal, outlined, and text.
 export const buttonVariants = [
@@ -11,8 +11,6 @@ export const buttonVariants = [
 
 export type ButtonVariant = typeof buttonVariants[number];
 
-export interface ButtonProps {
+export interface ButtonProps extends AriaButtonProps {
   variant?: ButtonVariant;
-  children: ReactNode;
-  disabled?: boolean;
 }

@@ -22,7 +22,9 @@ const IndexPage = () => {
           gridAutoFlow={{ _: "row", lg: "column" }}
           gridGap="4"
         >
-          <Button variant="elevated">Elevated Button</Button>
+          <Button variant="elevated" onPress={() => alert("Button pressed!")}>
+            Elevated Button
+          </Button>
           <Button variant="filled">Filled Button</Button>
           <Button variant="outlined">Outlined Button</Button>
           <Button variant="text">Text Button</Button>

@@ -26,6 +26,7 @@
     "@emotion/styled": "^11.10.4",
     "framer-motion": "^7.4.0",
     "polished": "^4.2.2",
+    "react-aria": "^3.20.0",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {

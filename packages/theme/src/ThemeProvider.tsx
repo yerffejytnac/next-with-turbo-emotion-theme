@@ -1,5 +1,6 @@
 import React, { FC, memo } from "react";
 import { Global, ThemeProvider as EmotionThemeProvider } from "@emotion/react";
+import { SSRProvider as ReactAriaSSRProvider } from "react-aria";
 
 import { globalStyles } from "./global";
 import { theme as defaultTheme } from "./theme";
@@ -17,10 +18,12 @@ export const ThemeProvider: FC<ThemeProviderProps> = memo(
     });
 
     return (
-      <EmotionThemeProvider theme={extendedTheme}>
-        <Global styles={globalStyles} />
-        {children}
-      </EmotionThemeProvider>
+      <ReactAriaSSRProvider>
+        <EmotionThemeProvider theme={extendedTheme}>
+          <Global styles={globalStyles} />
+          {children}
+        </EmotionThemeProvider>
+      </ReactAriaSSRProvider>
     );
   }
 );
