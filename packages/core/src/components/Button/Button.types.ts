@@ -8,6 +8,7 @@ export const buttonVariants = [
   "text",
   "tonal",
 ] as const;
+
 export type ButtonVariant = typeof buttonVariants[number];
 
 export interface ButtonProps {

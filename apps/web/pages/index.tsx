@@ -8,14 +8,10 @@ const IndexPage = () => {
         width={{ _: 1, lg: 0.8, xl: 0.6 }}
         mx={{ _: 0, lg: "auto" }}
       >
-        <Text
-          as="h1"
-          textStyle={["text-headline-medium", "text-display-small"]}
-          mb={[3, 2]}
-        >
+        <Text as="h1" variant="text-headline-medium" mb={[3, 2]}>
           Vaporware scenester organic, yr JOMO 3 wolf moon polaroid sartorial.
         </Text>
-        <Text textStyle="text-body-large" mb={4}>
+        <Text variant="text-body-large" mb={4}>
           Lumbersexual jianbing marfa, DSA disrupt slow-carb palo santo
           intelligentsia readymade mustache. DSA chillwave messenger bag viral
           meditation, ennui DIY swag vegan praxis portland pop-up. Woke squid

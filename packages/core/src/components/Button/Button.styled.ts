@@ -37,7 +37,7 @@ export const Root = styled.button<RootProps>`
       variants: {
         elevated: {
           backgroundColor: theme.colors.neutral[100],
-          color: theme.colors.neutral[40],
+          color: theme.colors.neutral[20],
           boxShadow: theme.shadows["elevation-1"],
           "&:hover": {
             backgroundColor: theme.colors.neutral[99],
@@ -74,9 +74,10 @@ export const Root = styled.button<RootProps>`
         },
         outlined: {
           backgroundColor: "transparent",
-          border: `1px solid ${theme.colors.neutral[60]}`,
+          border: `1px solid ${theme.colors.neutral[70]}`,
           "&:hover": {
             backgroundColor: theme.colors.neutral[99],
+            border: `1px solid ${theme.colors.neutral[40]}`,
           },
           "&:focus": {},
           "&:active": {

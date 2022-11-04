@@ -1,27 +1,13 @@
-import { ReactNode } from "react";
-import styled from "@emotion/styled";
-import {
-  space,
-  SpaceProps,
-  typography,
-  TypographyProps,
-  textStyle,
-  TextStyleProps,
-} from "styled-system";
+import { Root } from "./Text.styled";
+import { TextProps } from "./Text.types";
 
-interface Props extends SpaceProps, TextStyleProps, TypographyProps {
-  as?: React.ElementType;
-  children?: ReactNode;
-}
-
-const Root = styled.p<Props>`
-  ${space}
-  ${textStyle}
-  ${typography}
-`;
-
-export const Text = ({ as, children, ...rest }: Props) => (
-  <Root as={as} {...rest}>
+export const Text = ({
+  as,
+  children,
+  variant = "text-body-large",
+  ...rest
+}: TextProps) => (
+  <Root as={as} variant={variant} {...rest}>
     {children}
   </Root>
 );
