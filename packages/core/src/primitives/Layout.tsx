@@ -1,31 +1,31 @@
 import { ReactNode } from "react";
 import styled from "@emotion/styled";
 import {
-  flexbox,
-  FlexboxProps,
-  grid,
-  GridProps,
+  border,
+  SystemBorderProps,
+  common,
+  SystemCommonProps,
   layout,
-  LayoutProps,
-  space,
-  SpaceProps,
-} from "styled-system";
+  SystemLayoutProps,
+} from "@shared/theme";
 
-interface Props extends FlexboxProps, GridProps, LayoutProps, SpaceProps {
+export interface LayoutProps
+  extends SystemCommonProps,
+    SystemLayoutProps,
+    SystemBorderProps {
   children?: ReactNode;
 }
 
-const Root = styled.div<Props>`
+const Root = styled.div<LayoutProps>`
   width: 100%;
   height: 100%;
 
+  ${border}
+  ${common}
   ${layout}
-  ${flexbox}
-  ${grid}
-  ${space}
 `;
 
-export const Layout = ({ children, ...rest }: Props) => (
+export const Layout = ({ children, ...rest }: LayoutProps) => (
   <Root {...rest}>{children}</Root>
 );
 

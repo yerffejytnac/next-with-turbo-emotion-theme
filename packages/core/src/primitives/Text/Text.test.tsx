@@ -9,7 +9,7 @@ describe("Text", () => {
       </Text>
     );
 
-  test("should render child", () => {
+  test("should render children", () => {
     givenComponentRendered();
     screen.getByText(/Hello/i);
   });

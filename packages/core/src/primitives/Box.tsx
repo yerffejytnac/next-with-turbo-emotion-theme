@@ -1,36 +1,28 @@
 import { ReactNode } from "react";
 import styled from "@emotion/styled";
 import {
-  flexbox,
-  FlexboxProps,
-  grid,
-  GridProps,
-  gridGap,
-  GridGapProps,
+  border,
+  SystemBorderProps,
+  common,
+  SystemCommonProps,
   layout,
-  LayoutProps,
-  space,
-  SpaceProps,
-} from "styled-system";
+  SystemLayoutProps,
+} from "@shared/theme";
 
-interface Props
-  extends FlexboxProps,
-    GridProps,
-    GridGapProps,
-    LayoutProps,
-    SpaceProps {
+export interface BoxProps
+  extends SystemCommonProps,
+    SystemLayoutProps,
+    SystemBorderProps {
   children?: ReactNode;
 }
 
-const Root = styled.div<Props>`
+const Root = styled.div<BoxProps>`
+  ${border}
+  ${common}
   ${layout}
-  ${flexbox}
-  ${grid}
-  ${gridGap}
-  ${space}
 `;
 
-export const Box = ({ children, ...rest }: Props) => (
+export const Box = ({ children, ...rest }: BoxProps) => (
   <Root {...rest}>{children}</Root>
 );
 
